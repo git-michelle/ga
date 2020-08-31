@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .divleft {
+            background-color: yellowgreen;
+            width: 40%;
+            height: 400px;
+        }
+
+        .divright {
+            background-color: plum;
+            width: 30%;
+            height: 300px;
+            margin-left: -100px;
+
+            /* margin-left: -100px; */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                display: block;
+            }
+
+            .divs {
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="divs divleft"></div>
+    <div class="divs divright"></div>
+</div>
+
+
+<body>
+
+</body>
+
+</html>

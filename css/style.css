@@ -1,0 +1,527 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1440px;
+  scroll-padding-top: 70px; /* height of sticky header */
+}
+
+/* color variables  */
+:root {
+  --primary-color: #1800ff;
+  --secondary-color: #e2f3f3;
+  --CTA-color: #d63e2a;
+  --dark-text: #222;
+  --light-text: #fff;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.tertiary {
+  color: var(--CTA-color);
+}
+
+body {
+  color: #222;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 75px;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 50px;
+  color: #222;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  color: #222;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  /* font-size: 25px; */
+  /*second "body" class with karla 18px, line-height 27*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/***************************************** Utility Classes */
+
+/* Under construction*/
+
+.under-construction {
+  height: 100vh;
+  width: 100vw;
+  background: url("/images/Photos/underconstruction.jpg") no-repeat center
+    center/cover;
+}
+
+/* buttons */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background: #1800ff;
+  border: none;
+  border-radius: 3px;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-red {
+  background: #d63e2a;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #1800ff;
+}
+
+.btn-secondary {
+  background: #e2f3f3;
+}
+
+/*Push content below navbar*/
+
+.space-for-navbar {
+  height: 70px;
+}
+
+/* Section backgrounds*/
+
+.bg-secondary {
+  background: #e2f3f3;
+}
+
+.bg-base {
+  background: #f9f9f9;
+}
+
+.bg-base2 {
+  background: #fff;
+}
+
+.bg-triangles {
+  background: url("/images/home/triangle-bg.png") no-repeat center center/cover;
+}
+
+/*Custom triangles background*/
+.larger-overview {
+  background: url(../images/home/two-triangle-bg.png) no-repeat right center;
+}
+
+/* Flex Columns (sections with 2 columns) */
+
+.flex-columns.flex-reverse .row {
+  flex-direction: row-reverse;
+  /*so img and text switch places from what is specified below*/
+}
+
+.flex-columns .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+}
+
+.full-col-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*so img doesn't stretch weird*/
+}
+
+.flex-columns .column .smaller-col-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*so img doesn't stretch weird*/
+}
+
+.smaller-col-img img {
+  height: 62%;
+  max-width: 37rem;
+  margin-bottom: 5rem;
+  margin-right: 4rem;
+  object-fit: center center/cover;
+  /*so img doesn't stretch weird*/
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 100px;
+}
+
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+
+.flex-columns p {
+  margin: 20px 0;
+}
+
+/* Flex Items (3 column sections) */
+
+.flex-items {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.flex-items > div {
+  padding: 20px;
+  width: 100%;
+}
+
+/*H2 Section Headings*/
+.section-headings {
+  text-align: center;
+  padding: 50px;
+}
+
+.section-left-align {
+  text-align: left;
+}
+
+.section-right-align {
+  text-align: right;
+}
+
+.section-headings.underline-primary h2 {
+  position: relative;
+  /*for underline absolute to work*/
+}
+
+.section-headings.underline-primary h2:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  width: 37px;
+  border: 3px solid #1800ff;
+  background-color: #1800ff;
+  border-radius: 1px;
+}
+
+.section-headings p {
+  margin-top: 20px;
+}
+
+/* H3 section underlines*/
+h3.underline-secondary,
+p.underline-secondary {
+  position: relative;
+  /*for underline absolute to work*/
+}
+
+h3.underline-secondary:before,
+p.underline-secondary:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  width: 20px;
+  border: 2px solid #a8dadc;
+  background-color: #a8dadc;
+  border-radius: 1px;
+}
+
+h3.underline-red,
+p.underline-red {
+  position: relative;
+  /*for underline absolute to work*/
+}
+
+h3.underline-red:before,
+p.underline-red:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  width: 20px;
+  border: 2px solid #d63e2a;
+  background-color: #d63e2a;
+  border-radius: 1px;
+}
+
+/* Navbar */
+.navigation {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0 0 2px 0 #ddd;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.brand a,
+.brand a:visited {
+  color: var(--dark-text);
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+  font-family: "Karla", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #fff;
+  color: var(--dark-text);
+  text-decoration: none;
+}
+
+/* as just another link, it doesnt work on mobile
+a.nav-cta {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    line-height: 40px !important;
+    margin: 15px !important;
+} */
+
+/* .nav-donate-span {
+  background: var(--primary-color);
+  color: #fff;
+} */
+
+a.nav-cta {
+  background: url("/images/nav-cta.png") no-repeat center/cover;
+  margin-right: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+/*start menu items where arrows will rotate on click*/
+
+.fa-chevron-down {
+  margin-left: 0.3rem;
+  color: #f5f5f5;
+}
+
+.menu-with-arrow1 {
+  transition: all 0.5s linear;
+}
+
+.menu-with-arrow2 {
+  transition: all 0.5s linear;
+}
+
+.arrow-flip {
+  transform: rotate(180deg);
+}
+
+/* end of menu items where arrows will rotote on click*/
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  border-top: 0.4rem solid var(--primary-color);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*Header*/
+
+.hero {
+  background: linear-gradient(to left, transparent, #484b4f),
+    url("../images/home/home1.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  /*for here::before absolute to work*/
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /*need a height to push it down to the middle for this to work*/
+  text-align: left;
+  height: 100%;
+  /*based on the .hero 100vh*/
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  margin-top: 20rem;
+  font-size: 55px;
+  margin-left: 1rem;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin-left: 1rem;
+}
+
+.hero a {
+  margin-left: 1rem;
+}
+
+.hero .hero .navbar {
+  z-index: 2;
+  /*so the button on the hero img also stays behind*/
+}
+
+/* Gift Angels Overview Section*/
+
+.larger-overview .section-headings {
+  padding-bottom: 0;
+}
+
+/*become a gift angel*/
+
+.become-ga {
+  padding: 50px;
+}
+
+/*Footer*/
+
+footer {
+  padding-top: 3rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .flex-items {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  /* line-height: 27pt; */
+  font-size: 18px;
+}
+
+footer .footer-heading {
+  font-weight: bold;
+  margin-left: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+footer .footer-signup-text {
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+footer .contact-item {
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+footer .social {
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+footer .social > * {
+  margin-right: 2rem;
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--CTA-color);
+}
+
+hr {
+  width: 85%;
+  margin: auto;
+  border: 1px solid #c4c4c4;
+}
+
+footer .footer-bottom {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+footer div.footer-logo {
+  text-align: center;
+  font-size: 25px;
+  margin: 1rem 0;
+}
