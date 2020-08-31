@@ -356,12 +356,13 @@ a.nav-cta {
 a.nav-cta {
   background: url("/images/nav-cta.png") no-repeat center/cover;
   margin-right: 5px;
+  color: white !important;
 }
 
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: var(--primary-color);
-  color: #ffffff;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 /*start menu items where arrows will rotate on click*/
